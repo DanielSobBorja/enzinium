@@ -1,6 +1,8 @@
 package enzinium;
 
 import java.security.PublicKey;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TokenContract {
 
@@ -10,6 +12,8 @@ public class TokenContract {
     private String symbol = null;
     private double totalSupply = 0d;
     private Double tokenPrice = 0d;
+
+    private final Map<PublicKey, Double> balances = new HashMap<>();
 
     public TokenContract(Address owner) {
         this.owner = owner;
@@ -46,6 +50,22 @@ public class TokenContract {
 
     public void setTokenPrice(Double tokenPrice) {
         this.tokenPrice = tokenPrice;
+    }
+
+    public Map<PublicKey, Double> getBalances() {
+        return this.balances;
+    }
+
+    public void addOwner(PublicKey PK, Double units) {
+        getBalances().putIfAbsent(PK, units);
+    }
+
+    public int numOwners() {
+        return this.getBalances().size();
+    }
+
+    public Double balanceOf(PublicKey owner) {
+        return this.getBalances().getOrDefault(owner, 0d);
     }
 
     @Override

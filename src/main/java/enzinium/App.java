@@ -116,9 +116,9 @@ public class App {
          * @param cantidad de tokens que posee
          */
 
-        /*ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
+        ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
         // verifica que Rick no se actualiza una vez que ya existe en el balance
-        ricknillos.addOwner(rick.getPK(), 500d);*/
+        ricknillos.addOwner(rick.getPK(), 500d);
         
         /**
          * Consulta los balances
@@ -132,7 +132,7 @@ public class App {
          * Dada una direccion, devuelve su balance de tokens. Si no existe 
          * el propietario, devuelve cero.
          */
-       /* System.out.println("\n" + "Consulta de balances" + "\n" +
+        System.out.println("\n" + "Consulta de balances" + "\n" +
                                   "===================="        );
 
         System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
@@ -145,7 +145,7 @@ public class App {
         System.out.println("Entradas de Morty: " 
                                 + ricknillos.balanceOf(morty.getPK())
                                 + " "
-                                + ricknillos.symbol());*/
+                                + ricknillos.symbol());
 
         /**
          * Morty quiere comprarle 2 entradas a Rick
