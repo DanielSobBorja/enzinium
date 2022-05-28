@@ -236,9 +236,9 @@ public class App {
          *         y el numero de tokens que han adquirido
          */
 
-        /*System.out.println("\n" + "Lista de compradores" + "\n" +
+        System.out.println("\n" + "Lista de compradores" + "\n" +
                                   "===================="        );
-        ricknillos.owners();*/
+        ricknillos.owners();
         
         /**
          * Calcula el numero de asistentes al concierto (excluyendo a Rick),

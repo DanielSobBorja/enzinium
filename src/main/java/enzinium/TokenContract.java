@@ -94,6 +94,16 @@ public class TokenContract {
         }
     }
 
+    public void owners() {
+        for (PublicKey pk : this.getBalances().keySet()) {
+            if (!pk.equals(this.ownerPK)) {
+                System.out.println("Owner: " + pk.hashCode() + " "
+                        + getBalances().get(pk) + " "
+                        + this.symbol());
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "\n" + "name = " + name() + "\n" +
