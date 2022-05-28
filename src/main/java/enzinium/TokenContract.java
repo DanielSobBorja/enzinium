@@ -11,7 +11,7 @@ public class TokenContract {
     private String name = null;
     private String symbol = null;
     private double totalSupply = 0d;
-    private Double tokenPrice = 0d;
+    private double tokenPrice = 0d;
 
     private final Map<PublicKey, Double> balances = new HashMap<>();
 
@@ -66,6 +66,22 @@ public class TokenContract {
 
     public Double balanceOf(PublicKey owner) {
         return this.getBalances().getOrDefault(owner, 0d);
+    }
+
+    public void transfer(PublicKey recipient, Double units) {
+        try {
+            require(balanceOf(ownerPK) >= units);
+            this.getBalances().compute(ownerPK, (pk, tokens) -> tokens - units);
+            this.getBalances().put(recipient, balanceOf(recipient) + units);
+        } catch (Exception e) {
+            // fails silently
+        }
+    };
+
+    private void require(Boolean holds) throws Exception {
+        if (! holds) {
+            throw new Exception();
+        }
     }
 
     @Override

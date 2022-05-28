@@ -166,7 +166,7 @@ public class App {
          * Lanza una EXCEPCION si no se cumple la condicion
          */
 
-        /*System.out.println("\n" + "Transferencia de entradas" + "\n" +
+        System.out.println("\n" + "Transferencia de entradas" + "\n" +
                                   "========================="        );
 
         ricknillos.transfer(morty.getPK(), 2d);
@@ -195,7 +195,7 @@ public class App {
         System.out.println("2 entradas mas para Morty: " 
                                 + ricknillos.balanceOf(morty.getPK())
                                 + " "
-                                + ricknillos.symbol());*/
+                                + ricknillos.symbol());
 
         /**
          * A veces, hay reventa ;)
