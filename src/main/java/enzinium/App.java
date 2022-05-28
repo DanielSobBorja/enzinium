@@ -85,15 +85,15 @@ public class App {
          * @return el total de unidades de este token que actualmente existen.
          */
 
-        /*TokenContract ricknillos = new TokenContract(rick);
+        TokenContract ricknillos = new TokenContract(rick);
         ricknillos.setName("Ricknillos");
         ricknillos.setSymbol("RNiLL");
         ricknillos.setTotalSupply(100);
         ricknillos.setTokenPrice(5d);
 
-        System.out.println("\n" + "Contrato de los Ricknillos" + "\n" + 
+        System.out.println("\n" + "Contrato de los Ricknillos" + "\n" +
                                   "=========================="        );
-        System.out.println(ricknillos.toString());*/
+        System.out.println(ricknillos.toString());
 
         /**
          * El contrato TokenContract contiene una tabla de balances 
