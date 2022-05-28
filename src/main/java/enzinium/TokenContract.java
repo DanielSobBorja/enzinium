@@ -21,6 +21,10 @@ public class TokenContract {
         this.ownerPK = owner.getPK();
     };
 
+    public Address owner() {
+        return this.owner;
+    }
+
     public String name() {
         return this.name;
     }
@@ -109,6 +113,17 @@ public class TokenContract {
         this.getBalances().forEach((pk, amount) -> this.totalTokensSold += amount);
         this.totalTokensSold -= balanceOf(ownerPK);
         return this.totalTokensSold;
+    }
+
+    void payable(PublicKey recipient, Double amount) {
+        try {
+            require(amount >= this.getTokenPrice());
+            Double units = Math.floor(amount / tokenPrice);
+            transfer(recipient, units);
+            this.owner.transferEZI(amount);
+        } catch (Exception e) {
+            // fail silently
+        }
     }
 
     @Override

@@ -51,6 +51,13 @@ public class Address {
         this.balance += enziniums;
     }
 
+    public void send(TokenContract tc, Double amount) {
+        if (amount <= this.balance) {
+            tc.payable(getPK(), amount);
+            this.balance -= amount;
+        }
+    }
+
     @Override
     public String toString() {
         return "PK = " + getPK().hashCode() + "\n" +

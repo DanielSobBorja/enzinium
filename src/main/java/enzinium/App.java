@@ -309,7 +309,7 @@ public class App {
          * de esos enZiniums
          */
 
-        /*morty.send(ricknillos, 10d);
+        morty.send(ricknillos, 10d);
 
         ricknillos.owners();
         System.out.println("Owner: " + rick.getPK().hashCode() + " " 
@@ -340,6 +340,6 @@ public class App {
         System.out.println("y Rick sigue con sus 94 entradas: " 
                                             + ricknillos.balanceOf(rick.getPK())
                                             + " "
-                                            + ricknillos.symbol());*/
+                                            + ricknillos.symbol());
     }
 }
