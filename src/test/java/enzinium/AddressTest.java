@@ -33,9 +33,9 @@ public class AddressTest {
         Address rick = new Address();
         rick.generateKeyPair();
 
-//        rick.transferEZI(20d);
-//        rick.transferEZI(20d);
+        rick.transferEZI(20d);
+        rick.transferEZI(20d);
 
-//        assertEquals(40d, rick.getBalance(), 0d);
+        assertEquals(40d, rick.getBalance(), 0d);
     }
 }

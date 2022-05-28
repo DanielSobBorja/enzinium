@@ -43,8 +43,12 @@ public class Address {
         this.setSK(kPair.getPrivate());
     }
 
-    boolean isSKpresent() {
+    public boolean isSKpresent() {
         return this.getSK() != null;
+    }
+
+    public void transferEZI(double enziniums) {
+        this.balance += enziniums;
     }
 
     @Override

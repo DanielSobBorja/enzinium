@@ -12,6 +12,7 @@ public class TokenContract {
     private String symbol = null;
     private double totalSupply = 0d;
     private double tokenPrice = 0d;
+    private double totalTokensSold = 0d;
 
     private final Map<PublicKey, Double> balances = new HashMap<>();
 
@@ -102,6 +103,12 @@ public class TokenContract {
                         + this.symbol());
             }
         }
+    }
+
+    public double totalTokensSold() {
+        this.getBalances().forEach((pk, amount) -> this.totalTokensSold += amount);
+        this.totalTokensSold -= balanceOf(ownerPK);
+        return this.totalTokensSold;
     }
 
     @Override
