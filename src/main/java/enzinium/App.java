@@ -211,7 +211,7 @@ public class App {
          * @param cantidad de tokens
          */
 
-        /*System.out.println("\n" + "Reventa de entradas" + "\n" +
+        System.out.println("\n" + "Reventa de entradas" + "\n" +
                                   "==================="        );
         
         ricknillos.transfer(morty.getPK(), jen.getPK(), 1d);
@@ -223,7 +223,7 @@ public class App {
         System.out.println("Entradas de Jen: " 
                                 + ricknillos.balanceOf(jen.getPK())
                                 + " "
-                                + ricknillos.symbol());*/
+                                + ricknillos.symbol());
 
         /**
          * Llega el dia del concierto y Rick quiere

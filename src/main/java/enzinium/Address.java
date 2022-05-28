@@ -43,6 +43,10 @@ public class Address {
         this.setSK(kPair.getPrivate());
     }
 
+    boolean isSKpresent() {
+        return this.getSK() != null;
+    }
+
     @Override
     public String toString() {
         return "PK = " + getPK().hashCode() + "\n" +
